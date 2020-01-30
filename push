@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [[ -n "$(git status --porcelain)" ]]; then
+  echo >&2 './push can only be run with a clean Git checkout'
+  exit 2
+fi
+
+for t in types/*; do
+  version="$(basename "$t")"
+  parent=''
+  commit=''
+
+  if git rev-parse -q --verify "$version" 2>/dev/null; then
+    parent="$(git rev-parse --verify "$version")"
+  elif git rev-parse -q --verify "origin/${version}" 2>/dev/null; then
+    parent="$(git rev-parse --verify "origin/${version}")"
+  fi
+
+  git add --force "$t"
+  tree="$(git write-tree --prefix="${t}/")"
+
+  if [[ -n "$parent" && "$(git rev-parse --verify "${parent}^{tree}")" == "$tree" ]]; then
+    echo >&2 "$version already up-to-date: ${parent} (${tree})"
+  elif [[ -n "$parent" ]]; then
+    commit="$(git commit-tree "$tree" -p "$parent" -m "Update types for ${version}")"
+    git update-ref "$version" "$commit" "$parent"
+    # git push -u origin "$version"
+    echo >&2 "Updated $version: ${commit}"
+  else
+    commit="$(git commit-tree "$tree" -m "Create types for ${version}")"
+    git update-ref "$version" "$commit"
+    # git push -u origin "$version"
+    echo >&2 "Created $version: ${commit}"
+  fi
+
+  git reset HEAD
+done

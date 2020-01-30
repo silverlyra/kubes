@@ -1,4 +1,4 @@
-import {ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.

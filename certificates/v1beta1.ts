@@ -1,4 +1,4 @@
-import {ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * Describes a certificate signing request

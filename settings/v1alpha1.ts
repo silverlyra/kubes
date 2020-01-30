@@ -1,5 +1,5 @@
-import {EnvFromSource, EnvVar, Volume, VolumeMount} from "../../core/v1.ts"
-import {LabelSelector, ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {EnvFromSource, EnvVar, Volume, VolumeMount} from "../core/v1.ts"
+import {LabelSelector, ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * PodPreset is a policy resource that defines additional runtime requirements for a Pod.

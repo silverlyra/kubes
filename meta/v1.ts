@@ -1,4 +1,4 @@
-import {RawExtension} from "../../runtime.ts"
+import {RawExtension} from "../runtime.ts"
 
 /**
  * APIGroup contains the name, the supported versions, and the preferred version of a group.

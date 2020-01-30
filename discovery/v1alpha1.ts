@@ -1,5 +1,5 @@
-import {ObjectReference} from "../../core/v1.ts"
-import {ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {ObjectReference} from "../core/v1.ts"
+import {ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * Endpoint represents a single logical "backend" implementing a service.

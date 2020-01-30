@@ -1,6 +1,6 @@
-import {JobSpec} from "../v1.ts"
-import {ObjectReference} from "../../core/v1.ts"
-import {ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {ObjectReference} from "../core/v1.ts"
+import {ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
+import {JobSpec} from "./v1.ts"
 
 /**
  * CronJob represents the configuration of a single cron job.

@@ -1,4 +1,4 @@
-import {relative} from 'https://deno.land/std/path/posix.ts'
+import {basename, dirname} from 'https://deno.land/std/path/posix.ts'
 
 export class Project {
   private files: Map<string, File>
@@ -52,7 +52,21 @@ export class File {
   }
 
   render(): string[] {
-    const importedFiles = [...this.imports.keys()].sort((a, b) => a.localeCompare(b))
+    const relative = (from: string, to: string) => {
+      if (dirname(from) === dirname(to)) {
+        return `./${basename(to)}`
+      }
+
+      const prefix = dirname(from)
+        .split('/')
+        .map(() => '..')
+        .join('/')
+      return `${prefix}/${to}`
+    }
+
+    const importedFiles = [...this.imports.keys()].sort((a, b) =>
+      relative(this.path, a).localeCompare(relative(this.path, b))
+    )
     const imports = importedFiles.map(path => {
       const names = [...this.imports.get(path)].sort((a, b) => a.localeCompare(b)).join(', ')
       return `import {${names}} from ${JSON.stringify(relative(this.path, path))}`

@@ -12,9 +12,9 @@ for t in types/*; do
   parent=''
   commit=''
 
-  if git rev-parse -q --verify "$version" 2>/dev/null; then
+  if git rev-parse --verify "$version" >/dev/null 2>&1; then
     parent="$(git rev-parse --verify "$version")"
-  elif git rev-parse -q --verify "origin/${version}" 2>/dev/null; then
+  elif git rev-parse --verify "origin/${version}" >/dev/null 2>&1; then
     parent="$(git rev-parse --verify "origin/${version}")"
   fi
 

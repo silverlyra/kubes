@@ -1,5 +1,5 @@
-import {SELinuxOptions} from "../../core/v1.ts"
-import {DeleteOptions, LabelSelector, ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {SELinuxOptions} from "../core/v1.ts"
+import {DeleteOptions, LabelSelector, ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * AllowedCSIDriver represents a single inline CSI Driver that is allowed to be used.

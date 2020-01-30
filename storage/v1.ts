@@ -1,5 +1,5 @@
-import {TopologySelectorTerm} from "../../core/v1.ts"
-import {ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {TopologySelectorTerm} from "../core/v1.ts"
+import {ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * StorageClass describes the parameters for a class of storage for which PersistentVolumes can be dynamically provisioned.

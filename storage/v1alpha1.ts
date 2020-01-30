@@ -1,4 +1,4 @@
-import {ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * VolumeAttachment captures the intent to attach or detach the specified volume to/from the specified node.

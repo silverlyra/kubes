@@ -1,4 +1,4 @@
-import {ListMeta, MicroTime, ObjectMeta} from "../../meta/v1.ts"
+import {ListMeta, MicroTime, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * Lease defines a lease concept.

@@ -1,5 +1,5 @@
-import {PodTemplateSpec} from "../../core/v1.ts"
-import {LabelSelector, ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {PodTemplateSpec} from "../core/v1.ts"
+import {LabelSelector, ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * Job represents the configuration of a single job.

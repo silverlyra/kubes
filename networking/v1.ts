@@ -1,4 +1,4 @@
-import {LabelSelector, ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {LabelSelector, ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * IPBlock describes a particular CIDR (Ex. "192.168.1.1/24") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.

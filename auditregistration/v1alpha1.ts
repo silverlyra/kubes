@@ -1,4 +1,4 @@
-import {ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * AuditSink represents a cluster level audit sink

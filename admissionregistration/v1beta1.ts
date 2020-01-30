@@ -1,4 +1,4 @@
-import {LabelSelector, ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {LabelSelector, ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.

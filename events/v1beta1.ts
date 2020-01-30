@@ -1,5 +1,5 @@
-import {EventSource, ObjectReference} from "../../core/v1.ts"
-import {ListMeta, MicroTime, ObjectMeta, Time} from "../../meta/v1.ts"
+import {EventSource, ObjectReference} from "../core/v1.ts"
+import {ListMeta, MicroTime, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system.

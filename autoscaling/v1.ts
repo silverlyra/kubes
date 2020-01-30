@@ -1,4 +1,4 @@
-import {ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * CrossVersionObjectReference contains enough information to let you identify the referred resource.

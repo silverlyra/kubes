@@ -1,5 +1,5 @@
-import {Quantity} from "../../api/resource.ts"
-import {LabelSelector, ListMeta, ObjectMeta, Time} from "../../meta/v1.ts"
+import {Quantity} from "../api/resource.ts"
+import {LabelSelector, ListMeta, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * CrossVersionObjectReference contains enough information to let you identify the referred resource.

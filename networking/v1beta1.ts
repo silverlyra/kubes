@@ -1,5 +1,5 @@
-import {LoadBalancerStatus} from "../../core/v1.ts"
-import {ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {LoadBalancerStatus} from "../core/v1.ts"
+import {ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * HTTPIngressPath associates a path regex with a backend. Incoming urls matching the path are forwarded to the backend.

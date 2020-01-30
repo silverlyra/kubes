@@ -1,5 +1,5 @@
-import {Quantity} from "../../api/resource.ts"
-import {LabelSelector, ListMeta, MicroTime, ObjectMeta, Time} from "../../meta/v1.ts"
+import {Quantity} from "../api/resource.ts"
+import {LabelSelector, ListMeta, MicroTime, ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * Represents a Persistent Disk resource in AWS.

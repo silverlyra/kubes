@@ -26,12 +26,12 @@ for t in types/*; do
   elif [[ -n "$parent" ]]; then
     commit="$(git commit-tree "$tree" -p "$parent" -m "Update types for ${version}")"
     git update-ref "refs/heads/${version}" "$commit" "$parent"
-    # git push -u origin "$version"
+    git push -u origin "$version"
     echo >&2 "Updated $version: ${commit}"
   else
     commit="$(git commit-tree "$tree" -m "Create types for ${version}")"
     git update-ref "refs/heads/${version}" "$commit"
-    # git push -u origin "$version"
+    git push -u origin "$version"
     echo >&2 "Created $version: ${commit}"
   fi
 

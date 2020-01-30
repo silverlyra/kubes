@@ -1,4 +1,4 @@
-import {LabelSelector, ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {LabelSelector, ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole

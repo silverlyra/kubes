@@ -1,4 +1,4 @@
-import {ObjectMeta, Time} from "../../meta/v1.ts"
+import {ObjectMeta, Time} from "../meta/v1.ts"
 
 /**
  * BoundObjectReference is a reference to an object that a token is bound to.

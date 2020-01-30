@@ -1,6 +1,6 @@
-import {Quantity} from "../../api/resource.ts"
-import {Toleration} from "../../core/v1.ts"
-import {ListMeta, ObjectMeta} from "../../meta/v1.ts"
+import {Quantity} from "../api/resource.ts"
+import {Toleration} from "../core/v1.ts"
+import {ListMeta, ObjectMeta} from "../meta/v1.ts"
 
 /**
  * Overhead structure represents the resource overhead associated with running a pod.

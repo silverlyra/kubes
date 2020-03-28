@@ -68,7 +68,9 @@ export class File {
       relative(this.path, a).localeCompare(relative(this.path, b))
     )
     const imports = importedFiles.map(path => {
-      const names = [...this.imports.get(path)].sort((a, b) => a.localeCompare(b)).join(', ')
+      const names = [...(this.imports.get(path) || [])]
+        .sort((a, b) => a.localeCompare(b))
+        .join(', ')
       return `import {${names}} from ${JSON.stringify(relative(this.path, path))}`
     })
 

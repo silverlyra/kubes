@@ -1,10 +1,10 @@
 import {API, Definition, GroupVersionKind, Value, resolve} from '../openapi.ts'
 import {Project, File, Interface, Field, Union} from './src.ts'
 
-const replacedTypes = {
+const replacedTypes: {[name: string]: string} = {
   IntOrString: 'number | string',
 }
-const redefinedTypes = {
+const redefinedTypes: {[name: string]: string[]} = {
   JSON: ['any'],
   JSONSchemaPropsOrArray: ['JSONSchemaProps', 'JSONSchemaProps[]'],
   JSONSchemaPropsOrBool: ['JSONSchemaProps', 'boolean'],
@@ -64,10 +64,10 @@ class State {
     if ('$ref' in value) {
       let loc = nameToLocation(resolve(this.api, value).name)
 
-      if (loc.name in replacedTypes) {
-        t = replacedTypes[loc.name]
-      } else if (loc == null) {
+      if (loc == null) {
         throw new Error(`Value references excluded type: ${JSON.stringify(value)}`)
+      } else if (loc.name in replacedTypes) {
+        t = replacedTypes[loc.name]
       } else {
         file.import(loc.path, loc.name)
         t = loc.name
